@@ -36,18 +36,17 @@ echo
 #[PASO1] Menu Instalacion
 
 cont=0
-while [$cont -eq 0]; do
+while [ $cont -eq 0 ]; do
 	echo
 	echo "Selecciona una de las dos opciones siguientes:"
 	echo 
 	echo "[1] - Crear un nuevo usuario en el sistema (ejemplo: seed)"
 	echo "[2] - Usar un usuario ya existente (no es valido usar root como usuario)"
 	echo
-	echo -n "Introduce tu opcion: "
-	echo
+	echo -p "Introduce tu opcion: "
 	read -e opcion
 
-	if [$opcion -eq 1]; then
+	if [ $opcion -eq 1 ]; then
 		echo -n "Introduce un nombre de usuario: "
 		read -e user
 		echo -n "Introduce una contraseña para $user: "
@@ -58,7 +57,7 @@ while [$cont -eq 0]; do
 		
 		cont=1
 
-	elif [$opcion -eq 2]; then
+	elif [ $opcion -eq 2 ]; then
 		const=0
 		while [ $const -eq 0 ]; do
 			echo -n "Introduce un nombre de usuario valido: "
@@ -84,7 +83,7 @@ while [$cont -eq 0]; do
 
 	else
 		echo "No has seleccionado una opcion correcta"
-		cont=0
+		cont=1
 	fi
 		
 done
