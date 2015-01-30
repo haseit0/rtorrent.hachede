@@ -13,16 +13,16 @@ fi
 # Intro
 
 echo "  ----------------------------------------------------------------------------
-  "+HacheDe" (Version 1.0):
+  "+*****" (Version 1.0):
   
   Este Script ha sido realizado para la autoinstalacion de rtorrent + rutorrent
   en distribuciones Debian. Se ha desarrollado unicamente para ser usado por
-  usuarios de HacheDe.me si estas interesado en usarlo en otro sitio ponte en
+  usuarios de *****.me si estas interesado en usarlo en otro sitio ponte en
   contacto conmigo <EMAIL>.
   
   Script desarrollado y probado en Debian 7 OS.
   
-    * Haseito
+    * ******
   ----------------------------------------------------------------------------"
 echo
 echo
@@ -35,8 +35,8 @@ echo
 
 #[PASO1] Menu Instalacion
 
-cont=0
-while [ $cont -eq 0 ]; do
+con=0
+while [ $con -eq 0 ]; do
 	echo
 	echo "Selecciona una de las dos opciones siguientes:"
 	echo 
@@ -55,7 +55,7 @@ while [ $cont -eq 0 ]; do
 		useradd "$user"
 		passwd "$password"
 		
-		cont=1
+		con=1
 
 	elif [ $opcion -eq 2 ]; then
 		const=0
@@ -77,13 +77,13 @@ while [ $cont -eq 0 ]; do
 				echo "No puedes usar 'root' como usuario!"
 			else
 				const=1
-				cont=1
+				con=1
 			fi
 		done
 
 	else
 		echo "No has seleccionado una opcion correcta"
-		cont=1
+		con=1
 	fi
 		
 done
