@@ -35,7 +35,7 @@ echo
 
 #[PASO1] Menu Instalacion
 
-cont = 0
+cont=0
 while [$cont -eq 0]
 	echo
 	echo "Selecciona una de las dos opciones siguientes:"
@@ -56,7 +56,7 @@ while [$cont -eq 0]
 		useradd "$user"
 		passwd "$password"
 		
-		cont = 1
+		cont=1
 
 	elif [$opcion -eq 2]; then
 		const=0
@@ -84,7 +84,7 @@ while [$cont -eq 0]
 
 	else
 		echo "No has seleccionado una opcion correcta"
-		cont = 0
+		cont=0
 	fi
 		
 done
