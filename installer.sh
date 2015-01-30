@@ -36,7 +36,7 @@ echo
 #[PASO1] Menu Instalacion
 
 cont=0
-while [$cont -eq 0]
+while [$cont -eq 0]; do
 	echo
 	echo "Selecciona una de las dos opciones siguientes:"
 	echo 
@@ -86,7 +86,5 @@ while [$cont -eq 0]
 		echo "No has seleccionado una opcion correcta"
 		cont=0
 	fi
+		
 done
-
-homedir=$(cat /etc/passwd | grep "$user": | cut -d: -f6)
-
