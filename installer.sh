@@ -72,9 +72,9 @@ while [ $con -eq 0 ]; do
 				echo
 				echo "El usuario tiene un identificador (UID) demasiado corto "
 
-			elif [ $user == root ]; then
+			elif [ $user == nobody ]; then
 				echo
-				echo "No puedes usar 'root' como usuario!"
+				echo "No puedes usar 'nobody' como usuario!"
 			else
 				const=1
 				con=1
