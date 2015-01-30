@@ -83,7 +83,7 @@ while [ $con -eq 0 ]; do
 
 	else
 		echo "No has seleccionado una opcion correcta"
-		con=1
+		con=0
 	fi
 		
 done
