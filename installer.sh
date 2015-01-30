@@ -49,11 +49,9 @@ while [ $con -eq 0 ]; do
 	if [ $opcion -eq 1 ]; then
 		echo -n "Introduce un nombre de usuario: "
 		read -e user
-		echo -n "Introduce una contraseña para $user: "
-		read -e password
-		
 		useradd "$user"
-		passwd "$password"
+		echo -n "Introduce una contraseña para $user: "
+		passwd "$user"
 		
 		con=1
 
