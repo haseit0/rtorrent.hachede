@@ -33,6 +33,8 @@ read -p "Presiona [Enter] para continuar..." -n 1
 echo
 echo
 
+clear
+
 #[PASO1] Menu Instalacion
 
 con=0
@@ -43,14 +45,14 @@ while [ $con -eq 0 ]; do
 	echo "[1] - Crear un nuevo usuario en el sistema (ejemplo: seed)"
 	echo "[2] - Usar un usuario ya existente (no es valido usar root como usuario)"
 	echo
-	echo -p "Introduce tu opcion: "
+	echo -n "Introduce tu opcion: "
 	read -e opcion
 
 	if [ $opcion -eq 1 ]; then
 		echo -n "Introduce un nombre de usuario: "
 		read -e user
 		useradd "$user"
-		echo -n "Introduce una contraseña para $user: "
+		echo -n "Introduce una contraseña para $user -> "
 		passwd "$user"
 		
 		con=1
